@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<script defer src="~/assets/fontawesome/js/all.js"></script>
+	<link  rel="stylesheet" href="~/assets/css/style.css">
 	<link  rel="stylesheet" href="~/assets/css/theme-1.css">
 
 </head>
@@ -19,8 +20,8 @@
 <body>
 
 	<header class="header text-center">
-		<div class="force-overflow">
-			<h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">dibaj</a></h1>
+		< class="force-overflow">
+			<h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">حسین عباس آبادی</a></h1>
 
 			<nav class="navbar navbar-expand-lg navbar-dark">
 
@@ -34,7 +35,8 @@
 						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/me.jpeg" alt="image">
 
 						<div class="bio mb-3">
-							سلام ممد دیاج هستم به این سایت خوش امدید
+							سلام، حسین عباس آبادی هستم از موسسه آموزشی آتریا. به وبسایت شخصی من خوش
+							آمدید.
 						</div>
 						<ul class="social-list list-inline py-2 mx-auto">
 							<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
@@ -49,12 +51,12 @@
 					</div>
 					<ul class="navbar-nav flex-column text-right">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html">
+							<a class="nav-link" href=@Url.Action("Index","Home")>
 								<i class="fas fa-user fa-fw ml-2"></i>صفحه اصلی<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.html">
+							<a class="nav-link" href=@Url.Action("Contact","Home")>
 								<i class="fas fa-envelope-open-text fa-fw ml-2"></i>ارتباط با ما
 							</a>
 						</li>
@@ -66,11 +68,13 @@
 	</header>
 
 <div class="main-wrapper">
+	@RenderBody()
 
 
     <footer class="footer text-center py-4">
         <small class="copyright">
-				تولید شده توسط &copy; <a href="http://www.atriya.com" target="_blank">
+            تولید شده توسط &copy;
+            <a href="http://www.atriya.com" target="_blank">
                 موسسه آموزشی
                 آتریا
             </a>
@@ -80,9 +84,9 @@
 </div>
 
 	<!-- Javascript -->
-	<script src="assets/plugins/jquery-3.4.1.min.js"></script>
-	<script src="assets/plugins/popper.min.js"></script>
-	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/assets/plugins/jquery-3.4.1.min.js"></script>
+	<script src="~/assets/plugins/popper.min.js"></script>
 </body>
 
 </html>

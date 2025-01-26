@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using mydiv.Models;
 using System.Diagnostics;
 
-namespace mydiv.Controllers
+namespace DivCard.Controllers
 {
     public class HomeController : Controller
     {
