@@ -17,13 +17,28 @@ namespace DivCard.Controllers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Contact()
         {
+            var model = new Contact();
 	        return View();
 
         }
-        
+        [HttpPost]
+        public  IActionResult Contact(Contact form)
+        {
+
+	        if (ModelState.IsValid==false)
+	        {
+		        ViewData["error"] = "«ÿ·«·⁄«  Ê«—∆ ‘œÂ ’Õ?Õ ‰?” ";
+		        return View(form);
+	        }
+
+	        ViewData["succedd"] = "Å?€«„ ‘„« »« „Ê›ﬁ?  —”?œ";
+				return View();
+					
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
